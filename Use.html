@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171717" />
+    <title>Hồ sơ người dùng | FastFood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/auth.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="FastFood - Trang chủ"><span class="brand-mark">F</span><span>FAST<span class="brand-accent">FOOD</span><small>GÀ RÁN SIÊU NGON</small></span></a>
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <a href="index.html">Trang chủ</a><a href="SanPham.html">Sản phẩm</a><a href="GioHang.html">Giỏ hàng</a>
+        <a class="login-nav-button" href="DangNhap.html" data-login-link>Đăng nhập</a>
+        <a class="user-profile-link" href="Use.html" data-user-profile hidden title="Hồ sơ người dùng" aria-label="Hồ sơ người dùng"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" /></svg></a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Chuyển sang nền tối">☾</button>
+      </nav>
+    </header>
+    <main class="auth-main">
+      <section class="auth-card" aria-labelledby="profile-title">
+        <span class="eyebrow">TÀI KHOẢN FASTFOOD</span>
+        <h1 id="profile-title">Hồ sơ người dùng</h1>
+        <p class="auth-description">Cập nhật tên hoặc đổi mật khẩu của bạn.</p>
+        <form id="profile-form" novalidate>
+          <label class="auth-field">Email
+            <input name="email" class="profile-email" type="email" readonly />
+          </label>
+          <label class="auth-field">Họ và tên
+            <input name="name" type="text" autocomplete="name" required />
+          </label>
+          <label class="auth-field">Mật khẩu hiện tại
+            <input name="currentPassword" type="password" autocomplete="current-password" required />
+          </label>
+          <label class="auth-field">Mật khẩu mới <span class="field-hint">(để trống nếu không đổi)</span>
+            <input name="newPassword" type="password" autocomplete="new-password" />
+          </label>
+          <label class="auth-field">Xác nhận mật khẩu mới
+            <input name="confirmPassword" type="password" autocomplete="new-password" />
+          </label>
+          <p class="form-message" id="profile-message" role="status" aria-live="polite"></p>
+          <button class="button button-primary button-full" type="submit">Lưu thay đổi</button>
+        </form>
+        <button class="button button-logout button-full" type="button" data-logout hidden>Đăng xuất</button>
+        <p class="auth-switch"><a href="index.html">← Về trang chủ</a></p>
+      </section>
+    </main>
+    <footer class="site-footer"><a class="brand brand-footer" href="index.html"><span class="brand-mark">F</span><span>FAST<span class="brand-accent">FOOD</span><small>GÀ RÁN SIÊU NGON</small></span></a><p>Ngon giòn mỗi ngày · © 2026 FastFood</p></footer>
+  </body>
+</html>

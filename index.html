@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171717" />
+    <meta name="description" content="Gà rán nóng giòn, burger và combo hấp dẫn tại FastFood." />
+    <title>FastFood | Gà rán nóng giòn, ngon khó cưỡng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/products.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="FastFood - Trang chủ">
+        <span class="brand-mark">F</span>
+        <span>FAST<span class="brand-accent">FOOD</span><small>GÀ RÁN SIÊU NGON</small></span>
+      </a>
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <a class="active" href="index.html">Trang chủ</a>
+        <a href="SanPham.html">Sản phẩm</a>
+        <a class="cart-link" href="GioHang.html"
+          >Giỏ hàng <span class="cart-badge" id="cart-count">0</span></a
+        >
+        <a class="login-nav-button" href="DangNhap.html" data-login-link>Đăng nhập</a>
+        <a
+          class="user-profile-link"
+          href="Use.html"
+          data-user-profile
+          hidden
+          title="Hồ sơ người dùng"
+          aria-label="Hồ sơ người dùng"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 21a8 8 0 0 0-16 0M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" />
+          </svg>
+        </a>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Chuyển sang nền tối"
+        >
+          ☾
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> NGON GIÒN MỖI NGÀY</span>
+          <h1>Cắn một miếng,<br /><span>vui cả ngày.</span></h1>
+          <p>Gà rán nóng giòn, đậm vị cùng những combo dành riêng cho chiếc bụng đói của bạn.</p>
+          <a class="button button-primary" href="SanPham.html"
+            >Khám phá thực đơn <span aria-hidden="true">→</span></a
+          >
+          <div class="hero-note">
+            <span class="hero-stars">★★★★★</span><span>Giòn bên ngoài · Mọng bên trong</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-glow"></div>
+          <span class="hero-stamp">TƯƠI<br />NGON<br /><b>100%</b></span>
+          <img
+            id="slide-img"
+            src="anh/Combo Gà Rán Siêu Hot.webp"
+            alt="Combo gà rán nóng giòn FastFood"
+          />
+          <div class="hero-caption">
+            <span>Gợi ý hôm nay</span><strong id="slide-name">Combo Gà Rán Siêu Hot</strong>
+          </div>
+          <div class="slider-controls">
+            <button type="button" data-slide="prev" aria-label="Món trước">←</button>
+            <span id="slide-position">01 / 06</span>
+            <button type="button" data-slide="next" aria-label="Món tiếp theo">→</button>
+          </div>
+        </div>
+      </section>
+      <section class="container menu-section">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">MÓN NGON NHÀ LÀM</span>
+            <h2>Mới ra lò <span class="heading-accent">hôm nay</span></h2>
+          </div>
+          <a class="text-link" href="SanPham.html"
+            >Xem tất cả món <span aria-hidden="true">→</span></a
+          >
+        </div>
+        <div id="new-products" class="product-grid"></div>
+      </section>
+
+      <section class="feature-band">
+        <div class="feature-copy">
+          <span class="eyebrow">ĐƯỢC YÊU THÍCH NHẤT</span>
+          <h2>Đói bụng rồi?<br />Chọn món <span>best-seller</span> thôi!</h2>
+          <a class="button button-light" href="SanPham.html"
+            >Xem thực đơn <span aria-hidden="true">→</span></a
+          >
+        </div>
+        <div class="feature-products" id="hot-products"></div>
+        <span class="feature-spark" aria-hidden="true">✳</span>
+      </section>
+
+      <section class="container menu-section sale-section">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">NGON MÊ LY, GIÁ MÊ SAY</span>
+            <h2>Ưu đãi <span class="heading-accent">hôm nay</span></h2>
+          </div>
+          <a class="text-link" href="SanPham.html"
+            >Khám phá ưu đãi <span aria-hidden="true">→</span></a
+          >
+        </div>
+        <div id="sale-products" class="product-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand brand-footer" href="index.html"
+        ><span class="brand-mark">F</span
+        ><span>FAST<span class="brand-accent">FOOD</span><small>GÀ RÁN SIÊU NGON</small></span></a
+      >
+      <p>Ngon giòn mỗi ngày · © 2026 FastFood</p>
+    </footer>
+  </body>
+</html>

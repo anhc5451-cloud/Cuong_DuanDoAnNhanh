@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171717" />
+    <title>Thực đơn | FastFood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/products.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="FastFood - Trang chủ"><span class="brand-mark">F</span><span>FAST<span class="brand-accent">FOOD</span><small>GÀ RÁN SIÊU NGON</small></span></a>
+      <nav class="site-nav" aria-label="Điều hướng chính"><a href="index.html">Trang chủ</a><a class="active" href="SanPham.html">Sản phẩm</a><a class="cart-link" href="GioHang.html">Giỏ hàng <span class="cart-badge" id="cart-count">0</span></a><a class="login-nav-button" href="DangNhap.html" data-login-link>Đăng nhập</a><a class="user-profile-link" href="Use.html" data-user-profile hidden title="Hồ sơ người dùng" aria-label="Hồ sơ người dùng"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" /></svg></a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Chuyển sang nền tối">☾</button></nav>
+    </header>
+    <main>
+      <section class="page-banner">
+        <span class="eyebrow">BẠN ĐANG THÈM MÓN GÌ?</span>
+        <h1>Thực đơn <span class="heading-accent">nhà FastFood</span></h1>
+        <p>Tất cả món ngon nóng giòn, sẵn sàng làm bạn vui bụng.</p>
+      </section>
+      <section class="container catalog-section">
+        <div class="catalog-toolbar">
+          <div><h2>Tất cả sản phẩm</h2><p id="product-count">Đang tải thực đơn...</p></div>
+          <label class="search-box"><span aria-hidden="true">⌕</span><input id="product-search" type="search" placeholder="Tìm món bạn thích..." aria-label="Tìm sản phẩm" /></label>
+        </div>
+        <div class="catalog-filters" aria-label="Bộ lọc sản phẩm">
+          <label class="filter-control">Nhóm món
+            <select id="product-category" aria-label="Lọc theo nhóm món">
+              <option value="all">Tất cả nhóm món</option>
+              <option value="ga-ran">Gà rán</option>
+              <option value="burger">Burger</option>
+              <option value="combo">Combo</option>
+              <option value="mon-phu">Món ăn kèm</option>
+              <option value="kem">Kem</option>
+              <option value="do-uong">Đồ uống</option>
+            </select>
+          </label>
+          <label class="filter-control">Mức giá
+            <select id="product-price" aria-label="Lọc theo mức giá">
+              <option value="all">Tất cả mức giá</option>
+              <option value="under-30000">Dưới 30.000 ₫</option>
+              <option value="30000-50000">30.000–50.000 ₫</option>
+              <option value="over-50000">Trên 50.000 ₫</option>
+            </select>
+          </label>
+          <label class="filter-control">Sắp xếp
+            <select id="product-sort" aria-label="Sắp xếp sản phẩm">
+              <option value="default">Mặc định</option>
+              <option value="price-ascending">Giá tăng dần</option>
+              <option value="price-descending">Giá giảm dần</option>
+              <option value="name">Tên A–Z</option>
+            </select>
+          </label>
+        </div>
+        <div id="all-products" class="product-grid"></div>
+      </section>
+    </main>
+    <footer class="site-footer"><a class="brand brand-footer" href="index.html"><span class="brand-mark">F</span><span>FAST<span class="brand-accent">FOOD</span><small>GÀ RÁN SIÊU NGON</small></span></a><p>Ngon giòn mỗi ngày · © 2026 FastFood</p></footer>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171717" />
+    <title>Giỏ hàng | FastFood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="js/products.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="FastFood - Trang chủ"><span class="brand-mark">F</span><span>FAST<span class="brand-accent">FOOD</span><small>GÀ RÁN SIÊU NGON</small></span></a>
+      <nav class="site-nav" aria-label="Điều hướng chính"><a href="index.html">Trang chủ</a><a href="SanPham.html">Sản phẩm</a><a class="cart-link active" href="GioHang.html">Giỏ hàng <span class="cart-badge" id="cart-count">0</span></a><a class="login-nav-button" href="DangNhap.html" data-login-link>Đăng nhập</a><a class="user-profile-link" href="Use.html" data-user-profile hidden title="Hồ sơ người dùng" aria-label="Hồ sơ người dùng"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" /></svg></a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Chuyển sang nền tối">☾</button></nav>
+    </header>
+    <main>
+      <section class="page-banner cart-banner"><span class="eyebrow">MÓN NGON ĐANG CHỜ BẠN</span><h1>Giỏ hàng <span class="heading-accent">của bạn</span></h1><p>Kiểm tra lại món ngon trước khi thưởng thức nhé.</p></section>
+      <section class="container cart-layout">
+        <div class="cart-panel"><div class="cart-panel-heading"><h2>Món đã chọn</h2><span id="cart-item-count">0 món</span></div><div id="cart-items" aria-live="polite"></div></div>
+        <aside class="summary-panel"><span class="eyebrow">TỔNG KẾT ĐƠN HÀNG</span><h2>Chi tiết đơn</h2><div class="summary-row"><span>Tạm tính</span><strong id="cart-subtotal">0 ₫</strong></div><div class="summary-row"><span>Phí giao hàng</span><strong class="free-shipping">Miễn phí</strong></div><div class="summary-total"><span>Tổng cộng</span><strong id="cart-total">0 ₫</strong></div><button class="button button-primary button-full checkout-button" id="checkout-button" type="button">Thanh toán <span aria-hidden="true">→</span></button><a class="continue-shopping" href="SanPham.html">← Tiếp tục chọn món</a><p class="summary-note">Cảm ơn bạn đã chọn FastFood ♡</p></aside>
+      </section>
+    </main>
+    <footer class="site-footer"><a class="brand brand-footer" href="index.html"><span class="brand-mark">F</span><span>FAST<span class="brand-accent">FOOD</span><small>GÀ RÁN SIÊU NGON</small></span></a><p>Ngon giòn mỗi ngày · © 2026 FastFood</p></footer>
+  </body>
+</html>
